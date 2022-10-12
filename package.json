@@ -1,0 +1,21 @@
+{
+  "name": "swiss-borg-challenge",
+  "version": "1.0.0",
+  "description": "This repository was created for QA exercises given by SwissBorg.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikoral/swiss-borg-challenge.git"
+  },
+  "keywords": [],
+  "author": "ilhan koral",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ikoral/swiss-borg-challenge/issues"
+  },
+  "homepage": "https://github.com/ikoral/swiss-borg-challenge#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.27.0"
+  }
+}
