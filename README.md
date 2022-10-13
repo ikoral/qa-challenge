@@ -78,7 +78,7 @@ For integer numbers in **range (10, 100)** test cases placed [here](https://gith
 
 <br />
 
-I already run automation and the nice execution HTML report is under the `./playwright-report` folder. You may click all test cases and see the steps. When you click the failed test cases you may also see screenshots.
+I already run automation and the nice execution HTML report is under the `./playwright-report` folder. **Served HTML Report** is [here](https://ikoral.github.io/swiss-borg-challenge/playwright-report/index.html). You may click all test cases and see the steps. When you click the failed test cases you may also see screenshots.
 
 <br />
 
