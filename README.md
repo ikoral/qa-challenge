@@ -42,9 +42,13 @@ This exercise consists of two parts. First part, I investigate the first SUT and
 
 ### Manual Tests
 
-I haven't created any defect or bug reports for a while. Because many agile teams are now using some productivity tools such as Jira, Test Rail, Xray etc. to record and track their findings. But for the sake of exercises I created bug report under `./manual.tests` folder Please click [here](./manual.tests/_bug.report.md) to open bug report.
+I haven't created any defect or bug reports for a while. Because many agile teams are now using some productivity tools such as Jira, Test Rail, Xray etc. to record and track their findings. But for the sake of exercises I created bug report under `./manual.tests` folder.
+
+[Please click here](./manual.tests/_bug.report.md) to open bug report.
 
 I tried to add `must have` fields to my bug report. All screenshots related to manual tests are stored under `./manual.tests/screenshots` folder and they are named with its bugId + underscore + pictureNumber. For example if the screenshots belongs to bugId: 101, screenshots could be 101_01, 101_02 etc.
+
+I didn't create all the screenshots. I gave some examples how it could be done for manual tests.
 
 <br />
 
