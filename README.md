@@ -14,8 +14,8 @@
 
 - [Exercise 1](#exercise-1)
 
-  - [Exploratory Manual Test](#manual-tests)
-  - [Test Cases and Test Automation (UI and API)](#test-cases)
+  - [Exploratory Manual Test](#manual-tests-folder)
+  - [Test Automation (UI and API)](#test-automation)
 
 - [Exercise 2](#exercise-2)
 
@@ -36,31 +36,49 @@
 
 ## Exercise 1
 
-This exercise consists of two parts. First part, I investigate the first SUT and documented all my findings under `./manual.tests` folder. Second part is mini test automation involves both UI and API automated tests. I used `Playwright Test Framework` with `Ts` Language.
+This exercise consists of two parts. In the first part, I investigated the first SUT and documented all my findings under the `./manual.tests` folder. In the second part, test automation involves both UI and API automated tests. I used `Playwright Test Framework` with `Ts` Language.
 
 <br />
 
-### Manual Tests
+### Manual Tests Folder
 
-I haven't created any defect or bug reports for a while. Because many agile teams are now using some productivity tools such as Jira, Test Rail, Xray etc. to record and track their findings. But for the sake of exercises I created bug report under `./manual.tests` folder.
+#### Bug Reports
 
-<br />
-
-:bug: [Please click here](./manual.tests/_bug.report.md) to open **bug report**. :bug:
+I haven't created any defect or bug reports for a while. Because many agile teams are now using some productivity tools such as Jira, Test Rail, Xray, etc. to record and track their findings. But for the sake of exercises, I created a bug report under the `./manual.tests` folder.
 
 <br />
 
-I tried to add `must have` fields to my bug report. All screenshots related to manual tests are stored under `./manual.tests/screenshots` folder and they are named with its bugId + underscore + pictureNumber. For example if the screenshots belongs to bugId: 101, screenshots could be 101_01, 101_02 etc.
-
-I didn't create all the screenshots. I gave some examples how it could be done for manual tests.
+:bug: [Please click here](manual.tests/bug.reports/_bug.report.md) to open the **bug report**. :bug:
 
 <br />
 
-### Test Cases
+I tried to add `must-have` fields to my bug report. All screenshots related to manual tests are stored under the `./manual.tests/screenshots` folder and they are named with its bugId + underscore + pictureNumber. For example, if the screenshots belong to bugId: 101, screenshots could be 101_01, 101_02, etc.
 
-I didn't documented my test cases separately. Because, based on my findings, common bugs and also common sense (how the website should look like, how the calculator should behave like) I created my test cases under `./tests` folder. And each test cases are very self-explanatory with comments. They are kind of test steps.
+I didn't create all the screenshots. I gave some examples of how it could be done for the bug report.
 
-Factorial calculator exposes an api url so I also created API test cases as well as UI test cases. These test use `Mocha or Jest` style BDD test cases. It could be `Cucumber (Gherkin)` based test cases but I preferred in this way. If semi-technical people join the test process then Cucumber might be good choices since people find all When-Then steps easy. But personally I find mocha style test cases very flexible and it is just fun.
+<br />
+
+#### Test Cases
+
+I documented some test cases as examples under the `./manual.tests/test.cases` folder.
+</br>
+:mag_right: [Please click here](manual.tests/test.cases/test.cases.md) to open **sample test cases**. :mag_right:
+
+<br />
+
+### Test Automation
+
+I automated some test cases under the `./tests` folder. Each test cases are very self-explanatory with comments. They are kind of test steps.
+
+The factorial calculator exposes an **API URL** so I also created API test cases as well as UI test cases. These tests use `Mocha or Jest` style BDD test cases. It could be `Cucumber (Gherkin)` based test cases but I preferred them this way. If semi-technical people join the test process or if we are creating acceptance criteria then Cucumber might be a good choice since people find all When-Then steps easy. But personally, I find mocha-style test cases very flexible and it is just fun.
+
+<br />
+
+For integer numbers in **range (10, 100)** test cases placed [here](https://github.com/ikoral/swiss-borg-challenge/blob/d4e4be9a0728181818d5e6c4899e8b7741bea70b/tests/calculator.api/calculator.api.test.ts#L69)
+
+<br />
+
+I already run automation and the nice execution HTML report is under the `./playwright-report` folder. You may click all test cases and see the steps. When you click the failed test cases you may also see screenshots.
 
 <br />
 
@@ -75,7 +93,7 @@ Factorial calculator exposes an api url so I also created API test cases as well
 
 ### Prerequisites
 
-This project requires the `node v16.#` and at least one browser (chrome or firefox) are installed.
+This project requires `node v16.#` and at least one browser (chrome or firefox) to be installed.
 
 ### To set up this project on your local machine:
 
@@ -97,22 +115,22 @@ This project requires the `node v16.#` and at least one browser (chrome or firef
     npx playwright install
   ```
 
-### Run your test under tests folder
+### Run your test under the tests folder
 
-This command run all tests under `./tests` folder with provided config file. Playwright runs all tests in headless mode by default. If you add `headed` flag, you can see the browser for UI tests.
+This command runs all tests under the `./tests` folder with the provided config file. Playwright runs all tests in headless mode by default. If you add `headed` flag, you can see the browser for UI tests.
 
 ```
   npx playwright test tests --config=playwright.config.ts --headed`
 ```
 
-You can add decorator/tag to your test cases with `@` symbol. Please look at examples under tests folder. Then you may want to execute the specific tests which have specific decorator. Below command run all test cases with `@navigation` tag under tests folder no matter which sub-folder they are in.
+You can add a decorator/tag to your test cases with `@` symbol. Please look at the examples under the tests folder. Then you may want to execute the specific tests which have a specific decorator. Below, the command runs all test cases with the `@navigation` tag under the tests folder no matter which sub-folder they are in.
 
 `npx playwright test --grep @navigation --config=playwright.config.ts --headed`
 
-For detailed command and command flags please refer to playwright **[documentation](https://playwright.dev/docs/test-cli)**.
+For detailed command and command flags please refer to Playwright **[documentation](https://playwright.dev/docs/test-cli)**.
 
-### Open latest test execution report
+### Open the latest test execution report
 
-if any tests fail, playwright will open html test report by default. You can also open the latest execution report by running below command:
+if any tests fail, Playwright will open HTML test report by default. You can also open the latest execution report by running the below command:
 
 `npx playwright show-report playwright-report/html.report`

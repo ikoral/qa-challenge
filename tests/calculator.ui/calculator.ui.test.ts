@@ -28,7 +28,7 @@ test("calculate 4! by UI", async ({ page }) => {
   expect(await page.innerText("#resultDiv")).toBe("The factorial of 4 is: 24");
 });
 
-test("Terms and Conditions link should go to terms endpoint", async ({
+test("Terms and Conditions link should go to terms endpoint @navigation", async ({
   page,
 }) => {
   //use page object
@@ -39,7 +39,9 @@ test("Terms and Conditions link should go to terms endpoint", async ({
   await expect(page).toHaveURL("https://qainterview.pythonanywhere.com/terms");
 });
 
-test("Privacy link should go to privacy endpoint", async ({ page }) => {
+test("Privacy link should go to privacy endpoint @navigation", async ({
+  page,
+}) => {
   //use page object
   const pageMain = new PageMain(page);
   // click Privacy link
