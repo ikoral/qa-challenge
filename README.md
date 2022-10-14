@@ -84,9 +84,13 @@ I already run automation and the nice execution HTML report is under the `./play
 
 ## Exercise 2
 
-<br />
-<br />
-<br />
+Acceptance criteria can be written in different formats based on context and requirements. I saw two different types of them widely used in my experience:
+
+- The first one is scenario-based (Given-When-Then pattern)
+- The second one is task-based (or rule-based) mainly consists of a checklist of tasks.
+
+I tried to write two Acceptance Criteria used two different ways. Please find under the `./acceptance.criteria` folder.
+
 <br />
 
 ## Setup
