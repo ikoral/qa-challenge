@@ -1,4 +1,4 @@
-# <img style="width:25px; height:25px;" src="./assets/swissborg.svg"> SwissBorg Tech Challenge :muscle:
+# QA Tech Challenge :muscle:
 
 > This repository was created for QA exercises.
 
